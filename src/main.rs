@@ -1,6 +1,9 @@
 use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
+use std::thread;
+use std::time::Duration;
+use std::process;
 
 fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
@@ -33,4 +36,10 @@ fn main() {
             }
         }
     }
+
+    println!("The app will close in 10 seconds...");
+
+    thread::sleep(Duration::from_secs(10));
+
+    process::exit(0);
 }
