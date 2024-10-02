@@ -6,9 +6,9 @@ use std::time::Duration;
 use std::process;
 
 fn main() {
-    println!("Give me your best guess 1 - 1 000 000 :)");
+    println!("Give me your best guess 1 - 1 000 000 000 :)");
 
-    let secret_number = rand::thread_rng().gen_range(1..=1000000);
+    let secret_number = rand::thread_rng().gen_range(1..=1000000000);
 
     loop {
         println!("Please input your guess: ");
